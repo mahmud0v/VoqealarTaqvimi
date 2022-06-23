@@ -9,5 +9,18 @@
         android:id="@+id/homeScreen"
         tools:layout="@layout/home_screen"
         android:name="uz.tuit.voqealartaqvimi.HomeScreen"
-        android:label="HomeScreen" />
+        android:label="HomeScreen" >
+        <action
+            android:id="@+id/action_homeScreen_to_addEventScreen"
+            app:destination="@id/addEventScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEventScreen"
+        tools:layout="@layout/add_event"
+        android:name="uz.tuit.voqealartaqvimi.AddEventScreen"
+        android:label="AddEventScreen" >
+        <action
+            android:id="@+id/action_addEventScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
+    </fragment>
 </navigation>
