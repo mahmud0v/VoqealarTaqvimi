@@ -42,7 +42,6 @@ class HomeScreen : Fragment() {
 
         binding.calendarView.setOnDateChangeListener(
             CalendarView.OnDateChangeListener { calendarView, i, i2, i3 ->
-                Snackbar.make(calendarView, "$i3", Snackbar.LENGTH_SHORT).show()
                 val anoEventList =
                     AppDatabase.db!!.eventDao()!!.getDateEvents(i3.toString())
                 val adapter = EventAdapter()
@@ -50,13 +49,7 @@ class HomeScreen : Fragment() {
                 binding.rvView.adapter = adapter
                 binding.rvView.layoutManager = LinearLayoutManager(requireContext())
 
-//                if (anoEventList.isNotEmpty()) {
-//                    adapter = EventAdapter()
-//                    adapter.differ.submitList(anoEventList)
-//                    binding.rvView.adapter = null
-//                    binding.rvView.adapter = adapter
-//                    binding.rvView.layoutManager = LinearLayoutManager(requireContext())
-//                }
+
             }
         )
 
