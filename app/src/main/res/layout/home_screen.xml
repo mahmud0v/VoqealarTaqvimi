@@ -5,19 +5,31 @@
     android:layout_height="match_parent"
     android:background="#0DEDE9E9">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fasl"
+        android:id="@+id/fasl_id"
+        android:textSize="28sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
+
     <CalendarView
         android:id="@+id/calendar_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/fasl_id" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="330dp" />
+        android:layout_marginTop="370dp" />
 
     <ImageView
         android:id="@+id/add_btn"
